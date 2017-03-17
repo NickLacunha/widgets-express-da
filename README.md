@@ -7,3 +7,4 @@ To eventually include:
 4. A mobile application allowing drivers to check their route, notify dispatch when deliveries or pickups are complete, and receive on-the-fly updates when changes to the route occur. (to be written natively for Android)
 
 Work on the database component (1) and API (2) began 3-16-2017. I'm using Entity Framework code-first and ASP .NET WebAPI as the base stack for this, so these components will be developed in parallel.
+
