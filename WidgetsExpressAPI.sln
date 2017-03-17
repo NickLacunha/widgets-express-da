@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WidgetsExpressAPI", "WidgetsExpressAPI\WidgetsExpressAPI.csproj", "{479283D4-0EBC-4B67-A138-965C86CBD4FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WidgetsExpressAPI.Tests", "WidgetsExpressAPI.Tests\WidgetsExpressAPI.Tests.csproj", "{B4D226AE-69E7-435C-A724-664AB440DF7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{479283D4-0EBC-4B67-A138-965C86CBD4FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{479283D4-0EBC-4B67-A138-965C86CBD4FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{479283D4-0EBC-4B67-A138-965C86CBD4FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{479283D4-0EBC-4B67-A138-965C86CBD4FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4D226AE-69E7-435C-A724-664AB440DF7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4D226AE-69E7-435C-A724-664AB440DF7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4D226AE-69E7-435C-A724-664AB440DF7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4D226AE-69E7-435C-A724-664AB440DF7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
