@@ -13,44 +13,44 @@ using WidgetsExpressAPI.Models;
 
 namespace WidgetsExpressAPI.Controllers
 {
-    public class CustomersController : ApiController
+    public class DriversController : ApiController
     {
         private WidgetsExpressAPIContext db = new WidgetsExpressAPIContext();
 
-        // GET: api/Customers
-        public IQueryable<Customer> GetCustomers()
+        // GET: api/Drivers
+        public IQueryable<Driver> GetDrivers()
         {
-            return db.Customers;
+            return db.Drivers;
         }
 
-        // GET: api/Customers/5
-        [ResponseType(typeof(Customer))]
-        public async Task<IHttpActionResult> GetCustomer(int id)
+        // GET: api/Drivers/5
+        [ResponseType(typeof(Driver))]
+        public async Task<IHttpActionResult> GetDriver(int id)
         {
-            Customer customer = await db.Customers.FindAsync(id);
-            if (customer == null)
+            Driver driver = await db.Drivers.FindAsync(id);
+            if (driver == null)
             {
                 return NotFound();
             }
 
-            return Ok(customer);
+            return Ok(driver);
         }
 
-        // PUT: api/Customers/5
+        // PUT: api/Drivers/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutCustomer(int id, Customer customer)
+        public async Task<IHttpActionResult> PutDriver(int id, Driver driver)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != customer.Id)
+            if (id != driver.Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(customer).State = EntityState.Modified;
+            db.Entry(driver).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +58,7 @@ namespace WidgetsExpressAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CustomerExists(id))
+                if (!DriverExists(id))
                 {
                     return NotFound();
                 }
@@ -71,35 +71,35 @@ namespace WidgetsExpressAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Customers
-        [ResponseType(typeof(Customer))]
-        public async Task<IHttpActionResult> PostCustomer(Customer customer)
+        // POST: api/Drivers
+        [ResponseType(typeof(Driver))]
+        public async Task<IHttpActionResult> PostDriver(Driver driver)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Customers.Add(customer);
+            db.Drivers.Add(driver);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = customer.Id }, customer);
+            return CreatedAtRoute("DefaultApi", new { id = driver.Id }, driver);
         }
 
-        // DELETE: api/Customers/5
-        [ResponseType(typeof(Customer))]
-        public async Task<IHttpActionResult> DeleteCustomer(int id)
+        // DELETE: api/Drivers/5
+        [ResponseType(typeof(Driver))]
+        public async Task<IHttpActionResult> DeleteDriver(int id)
         {
-            Customer customer = await db.Customers.FindAsync(id);
-            if (customer == null)
+            Driver driver = await db.Drivers.FindAsync(id);
+            if (driver == null)
             {
                 return NotFound();
             }
 
-            db.Customers.Remove(customer);
+            db.Drivers.Remove(driver);
             await db.SaveChangesAsync();
 
-            return Ok(customer);
+            return Ok(driver);
         }
 
         protected override void Dispose(bool disposing)
@@ -111,9 +111,9 @@ namespace WidgetsExpressAPI.Controllers
             base.Dispose(disposing);
         }
 
-        private bool CustomerExists(int id)
+        private bool DriverExists(int id)
         {
-            return db.Customers.Count(e => e.Id == id) > 0;
+            return db.Drivers.Count(e => e.Id == id) > 0;
         }
     }
 }

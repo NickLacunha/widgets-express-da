@@ -13,44 +13,44 @@ using WidgetsExpressAPI.Models;
 
 namespace WidgetsExpressAPI.Controllers
 {
-    public class CustomersController : ApiController
+    public class OrdersController : ApiController
     {
         private WidgetsExpressAPIContext db = new WidgetsExpressAPIContext();
 
-        // GET: api/Customers
-        public IQueryable<Customer> GetCustomers()
+        // GET: api/Orders
+        public IQueryable<Order> GetOrders()
         {
-            return db.Customers;
+            return db.Orders;
         }
 
-        // GET: api/Customers/5
-        [ResponseType(typeof(Customer))]
-        public async Task<IHttpActionResult> GetCustomer(int id)
+        // GET: api/Orders/5
+        [ResponseType(typeof(Order))]
+        public async Task<IHttpActionResult> GetOrder(int id)
         {
-            Customer customer = await db.Customers.FindAsync(id);
-            if (customer == null)
+            Order order = await db.Orders.FindAsync(id);
+            if (order == null)
             {
                 return NotFound();
             }
 
-            return Ok(customer);
+            return Ok(order);
         }
 
-        // PUT: api/Customers/5
+        // PUT: api/Orders/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutCustomer(int id, Customer customer)
+        public async Task<IHttpActionResult> PutOrder(int id, Order order)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != customer.Id)
+            if (id != order.Id)
             {
                 return BadRequest();
             }
 
-            db.Entry(customer).State = EntityState.Modified;
+            db.Entry(order).State = EntityState.Modified;
 
             try
             {
@@ -58,7 +58,7 @@ namespace WidgetsExpressAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CustomerExists(id))
+                if (!OrderExists(id))
                 {
                     return NotFound();
                 }
@@ -71,35 +71,35 @@ namespace WidgetsExpressAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Customers
-        [ResponseType(typeof(Customer))]
-        public async Task<IHttpActionResult> PostCustomer(Customer customer)
+        // POST: api/Orders
+        [ResponseType(typeof(Order))]
+        public async Task<IHttpActionResult> PostOrder(Order order)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Customers.Add(customer);
+            db.Orders.Add(order);
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = customer.Id }, customer);
+            return CreatedAtRoute("DefaultApi", new { id = order.Id }, order);
         }
 
-        // DELETE: api/Customers/5
-        [ResponseType(typeof(Customer))]
-        public async Task<IHttpActionResult> DeleteCustomer(int id)
+        // DELETE: api/Orders/5
+        [ResponseType(typeof(Order))]
+        public async Task<IHttpActionResult> DeleteOrder(int id)
         {
-            Customer customer = await db.Customers.FindAsync(id);
-            if (customer == null)
+            Order order = await db.Orders.FindAsync(id);
+            if (order == null)
             {
                 return NotFound();
             }
 
-            db.Customers.Remove(customer);
+            db.Orders.Remove(order);
             await db.SaveChangesAsync();
 
-            return Ok(customer);
+            return Ok(order);
         }
 
         protected override void Dispose(bool disposing)
@@ -111,9 +111,9 @@ namespace WidgetsExpressAPI.Controllers
             base.Dispose(disposing);
         }
 
-        private bool CustomerExists(int id)
+        private bool OrderExists(int id)
         {
-            return db.Customers.Count(e => e.Id == id) > 0;
+            return db.Orders.Count(e => e.Id == id) > 0;
         }
     }
 }
