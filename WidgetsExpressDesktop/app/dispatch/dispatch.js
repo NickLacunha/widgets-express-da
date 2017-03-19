@@ -4,11 +4,11 @@ angular.module('desktopApp.dispatch', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/dispatch', {
-      templateUrl: 'common/nimp.html',
+    templateUrl: 'dispatch/dispatch.html',
     controller: 'dispatchControl'
   });
 }])
 
 .controller('dispatchControl', [function() {
-    this.name = "Dispatch control panel";
+
 }]);
