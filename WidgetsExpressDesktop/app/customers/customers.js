@@ -9,6 +9,6 @@ angular.module('desktopApp.customers', ['ngRoute'])
   });
 }])
 
-.controller('View1Control', [function() {
+.controller('customersControl', [function() {
 
 }]);

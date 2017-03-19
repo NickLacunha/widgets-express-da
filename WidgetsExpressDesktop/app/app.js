@@ -4,7 +4,9 @@
 angular.module('desktopApp', [
   'ngRoute',
   'desktopApp.home',
-  'desktopApp.customers'
+  'desktopApp.customers',
+  'desktopApp.orders',
+  'desktopApp.dispatch'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
