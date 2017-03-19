@@ -4,11 +4,11 @@ angular.module('desktopApp.orders', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/orders', {
-    templateUrl: 'orders/orders.html',
+      templateUrl: 'common/nimp.html',
     controller: 'ordersControl'
   });
 }])
 
 .controller('ordersControl', [function() {
-
+    this.name = "Order management page";
 }]);
