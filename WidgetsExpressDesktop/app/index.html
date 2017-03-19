@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lange="en" ng-app="desktopApp">
 
   <head>
     
@@ -14,6 +14,11 @@
       <script src="https://cdn.rawgit.com/olton/Metro-UI-CSS/develop/build/js/metro.min.js"></script>
 
       <script>if (window.module) module = window.module;</script>
+
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/angular-route/angular-route.js"></script>
+      <script src="app.js"></script>
+      <script src="home/home.js"></script>
 
       <style>
           .tile-area-controls {
@@ -281,7 +286,7 @@
     </div>
 
     <div class="tile-area fg-white tile-area-scheme-dark" style="height: 100%; width: 100%; max-height: 100% !important;">
-        <h1 class="tile-area-title" style="align-content: center;">WidgetsExpress Dispatch</h1>
+       <!--<h1 class="tile-area-title" style="align-content: center;">WidgetsExpress Dispatch</h1>
         <div class="tile-group double" style="left: 0px;">
 
 
@@ -306,7 +311,8 @@
                     <span class="tile-label">Weather</span>
                 </div>
             </div>
-        </div>
+        </div> -->
+        <div ng-view></div>
     </div>
 
 
