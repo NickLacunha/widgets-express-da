@@ -1,108 +1,23 @@
 ﻿<!DOCTYPE html>
 <html lange="en" ng-app="desktopApp">
-
   <head>
-    
     <meta charset="UTF-8">
     <title>Hello World!</title>
       <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <link rel="stylesheet" href="bower_components\metro-dist\css\metro.css" />
       <link rel="stylesheet" href="bower_components\metro-dist\css\metro-icons.css" />
-      
       <script src="https://cdn.rawgit.com/olton/Metro-UI-CSS/develop/build/js/metro.min.js"></script>
-
       <script>if (window.module) module = window.module;</script>
-
       <script src="bower_components/angular/angular.js"></script>
       <script src="bower_components/angular-route/angular-route.js"></script>
       <script src="app.js"></script>
       <script src="home/home.js"></script>
-
+      <script src="customers/customers.js"></script>
   </head>
 <body style="overflow-y: hidden;">
-
-    <!--<div data-role="charm" id="charmSearch" class="charm right-side" style="opacity: 1; display: none;">
-        <h1 class="text-light">Search</h1>
-        <hr class="thin">
-        <br>
-        <div class="input-control text full-size">
-            <label>
-                <span class="dropdown-toggle drop-marker-light">Anywhere</span>
-                <ul class="d-menu" data-role="dropdown">
-                    <li><a onclick="setSearchPlace(this)">Anywhere</a></li>
-                    <li><a onclick="setSearchPlace(this)">Options</a></li>
-                    <li><a onclick="setSearchPlace(this)">Files</a></li>
-                    <li><a onclick="setSearchPlace(this)">Internet</a></li>
-                </ul>
-            </label>
-            <input type="text">
-            <button class="button"><span class="mif-search"></span></button>
-        </div>
-        <span class="charm-closer"></span>
-        <span class="charm-closer"></span>
-    </div>
-
-    <div data-role="charm" id="charmSettings" data-position="top" class="charm top-side" style="opacity: 1; display: none;">
-        <h1 class="text-light">Settings</h1>
-        <hr class="thin">
-        <br>
-        <div class="schemeButtons">
-            <div class="button square-button tile-area-scheme-dark" data-scheme="dark"></div>
-            <div class="button square-button tile-area-scheme-darkBrown" data-scheme="darkBrown"></div>
-            <div class="button square-button tile-area-scheme-darkCrimson" data-scheme="darkCrimson"></div>
-            <div class="button square-button tile-area-scheme-darkViolet" data-scheme="darkViolet"></div>
-            <div class="button square-button tile-area-scheme-darkMagenta" data-scheme="darkMagenta"></div>
-            <div class="button square-button tile-area-scheme-darkCyan" data-scheme="darkCyan"></div>
-            <div class="button square-button tile-area-scheme-darkCobalt" data-scheme="darkCobalt"></div>
-            <div class="button square-button tile-area-scheme-darkTeal" data-scheme="darkTeal"></div>
-            <div class="button square-button tile-area-scheme-darkEmerald" data-scheme="darkEmerald"></div>
-            <div class="button square-button tile-area-scheme-darkGreen" data-scheme="darkGreen"></div>
-            <div class="button square-button tile-area-scheme-darkOrange" data-scheme="darkOrange"></div>
-            <div class="button square-button tile-area-scheme-darkRed" data-scheme="darkRed"></div>
-            <div class="button square-button tile-area-scheme-darkPink" data-scheme="darkPink"></div>
-            <div class="button square-button tile-area-scheme-darkIndigo" data-scheme="darkIndigo"></div>
-            <div class="button square-button tile-area-scheme-darkBlue" data-scheme="darkBlue"></div>
-            <div class="button square-button tile-area-scheme-lightBlue" data-scheme="lightBlue"></div>
-            <div class="button square-button tile-area-scheme-lightTeal" data-scheme="lightTeal"></div>
-            <div class="button square-button tile-area-scheme-lightOlive" data-scheme="lightOlive"></div>
-            <div class="button square-button tile-area-scheme-lightOrange" data-scheme="lightOrange"></div>
-            <div class="button square-button tile-area-scheme-lightPink" data-scheme="lightPink"></div>
-            <div class="button square-button tile-area-scheme-grayed" data-scheme="grayed"></div>
-        </div>
-        <span class="charm-closer"></span>
-        <span class="charm-closer"></span>
-    </div>-->
-
     <div class="tile-area fg-white tile-area-scheme-dark" style="height: 100%; width: 100%; max-height: 100% !important;">
-       <!--<h1 class="tile-area-title" style="align-content: center;">WidgetsExpress Dispatch</h1>
-        <div class="tile-group double" style="left: 0px;">
-
-
-            <div class="tile-container">
-
-                <a href="http://calendar.google.com" class="tile-wide bg-indigo fg-white" data-role="tile" style="opacity: 1; transform: scale(1); transition: 0.3s;">
-                    <div class="tile-content iconic">
-                        <span class="icon mif-calendar"></span>
-                    </div>
-                    <span class="tile-label">Calendar</span>
-                </a>
-
-                <div class="tile-wide bg-darkBlue fg-white" data-role="tile" onclick="document.location.href='http://gmail.com'" style="opacity: 1; transform: scale(1); transition: 0.3s;">
-                    <div class="tile-content iconic">
-                        <span class="icon mif-envelop"></span>
-                    </div>
-                    <span class="tile-label">Inbox</span>
-                </div>
-
-                <div class="tile-wide bg-steel fg-white" data-role="tile" data-on-click="document.location.href='http://forecast.io'" style="opacity: 1; transform: scale(1); transition: 0.3s;">
-
-                    <span class="tile-label">Weather</span>
-                </div>
-            </div>
-        </div> -->
-        <div ng-view></div>
+       <div ng-view></div>
     </div>
 </body>
 </html>
