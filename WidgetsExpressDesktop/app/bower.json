@@ -1,0 +1,27 @@
+{
+  "name": "WidgetsExpressDesktop",
+  "description": "a simple desktop application",
+  "main": "main.js",
+  "authors": [
+    "NickLacunha <njpadinha@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/NickLacunha/widgets-express-da",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "metro": "^3.0.17",
+    "metro-dist": "^3.0.15",
+    "angular": "^1.6.3",
+    "angular-route": "^1.6.3",
+    "angular-loader": "^1.6.3",
+    "angular-mocks": "^1.6.3",
+    "html5-boilerplate": "^5.3.0"
+  }
+}
